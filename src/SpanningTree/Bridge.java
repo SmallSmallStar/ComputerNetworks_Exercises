@@ -112,7 +112,6 @@ public class Bridge implements Runnable
                     // 断开这个网桥与局域网的连接。
                     connected.put(lan, false);
                 }
-
                 else if (message.distanceToRoot == this.distanceToRootBridge)
                 {
                     if (this.bridgeId > message.sendMegBridgeId)
@@ -188,7 +187,7 @@ public class Bridge implements Runnable
     @Override
     public String toString()
     {
-        return "The id of the root bridge is " + this.rootBridgeId + " , the distance from " + this.bridgeId + " bridge to root is " + this.distanceToRootBridge;
+        return "The root id for Bridge " + this.bridgeId + " is " + this.rootBridgeId + ", distance to root = " + this.distanceToRootBridge;
     }
 
     /**
